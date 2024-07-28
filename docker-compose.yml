@@ -1,0 +1,15 @@
+# docker-compose.yml
+
+services:
+  go-pprof-demo-dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+        - ./:/workspace
+        - go-pprof-demo-dev-vsc:/root/.vscode-server
+    stdin_open: true
+    tty: true
+
+volumes:
+  go-pprof-demo-dev-vsc:
