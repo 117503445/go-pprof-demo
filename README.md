@@ -24,3 +24,7 @@ VSZ 表示虚拟内存大小（Virtual Memory Size），即进程使用的虚拟
 ps -p 25291 -o %mem,rss,vsz
 
 curl http://127.0.0.1:6060/debug/pprof/heap -o heap_info.out
+go tool pprof --http :9091 heap_info.out
+
+
+go tool pprof --http :9091 http://127.0.0.1:6060/debug/pprof/heap
