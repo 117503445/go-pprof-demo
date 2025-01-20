@@ -17,6 +17,8 @@ var DateTime = "2006-01-02 15:04:05"
 
 // 提升资源层面的可观测性
 func main() {
+	print(string(debug.Stack()))
+
 	statsviz.RegisterDefault() // 实时查看 Go 应用程序运行时统计信息(GC，MemStats 等)
 
 	// 打印GC信息
